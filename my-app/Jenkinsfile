@@ -13,8 +13,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("/var/lib/jenkins/workspace/newpipeline/my-app") {
-                sh 'mvn clean package'
+                dir("/var/lib/jenkins/workspace/my pipeline/my-app") {
+                sh 'mvn -B -DskipTests clean package'
                 }
             }
         }
