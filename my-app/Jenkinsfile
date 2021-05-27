@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("/var/lib/jenkins/workspace/my pipeline/my-app") {
+                dir("/var/lib/jenkins/workspace/new1/my-app") {
 sh "mvn -Dmaven.test.failure.ignore=true clean package"                }
             }
         }
