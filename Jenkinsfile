@@ -30,8 +30,8 @@ pipeline{
 steps {
 script {
 docker.withRegistry( '', registryCredential ) {
-dockerImage.push("$BUILD_NUMBER")
-dockerImage.push('latest')
+                 sh 'docker push devopshint/my-app-1.0'
+
 }
 }
 }
