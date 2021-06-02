@@ -10,13 +10,13 @@ pipeline {
     agent any
     stages {
         stage('Cloning our Git') { 
-10
+
             steps { 
-11
+
                 git 'https://github.com/devopshint/jenkins-maven.git' 
-12
+
             }
-13
+
         } 
      stage('Building our image') { 
 
