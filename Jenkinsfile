@@ -1,9 +1,9 @@
 pipeline{
       environment { 
 
-        registry = "YourDockerhubAccount/YourRepository" 
+        registry = "devopshint/my-app-1.0" 
 
-        registryCredential = 'dockerhub_id' 
+        registryCredential = 'devopshint' 
 
     }
     agent any
