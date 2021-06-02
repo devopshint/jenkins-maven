@@ -1,4 +1,11 @@
 pipeline{
+      environment { 
+
+        registry = "YourDockerhubAccount/YourRepository" 
+
+        registryCredential = 'dockerhub_id' 
+
+    }
     agent any
     tools {
         maven 'MAVEN'
@@ -16,6 +23,13 @@ pipeline{
             steps {
                 script {
                   sh 'docker build -t devopshint/my-app-1.0 .'
+                }
+            }
+        }
+    stage('Push Docker Image') {
+            steps {
+                script {
+                 sh 'docker push devopshint/my-app-1.0'
                 }
             }
         }
