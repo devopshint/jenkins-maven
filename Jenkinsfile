@@ -1,4 +1,11 @@
 pipeline {
+    environment { 
+
+        registry = "devopshint/my-app-1.0" 
+
+        registryCredential = 'devopshint' 
+
+    }
     agent any
     tools {
         maven 'MAVEN'
@@ -20,6 +27,15 @@ pipeline {
                 }
             }
         }
-    }
+    stage('Deploy Image') {
+        steps {
+            script {
+                docker.withRegistry( '', registryCredential ) {
+                 sh 'docker push devopshint/my-app-1.0:latest'
 
+}
+}
+}
+}
+}
 }
