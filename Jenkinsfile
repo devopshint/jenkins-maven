@@ -8,7 +8,7 @@ pipeline {
 
     tools {
 
-        maven "Maven"
+        maven "MAVEN"
 
     }
 
