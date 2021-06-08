@@ -56,8 +56,6 @@ pipeline {
 
                         nexusArtifactUploader(
 
-                            nexusVersion: NEXUS3,
-
                             protocol: http,
 
                             nexusUrl: "http://18.222.198.245:8081/",
