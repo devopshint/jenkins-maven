@@ -1,16 +1,30 @@
 pipeline {
-    environment { 
 
-        registry = "devopshint/my-app-1.0" 
+    agent {
 
-        registryCredential = 'devopshint' 
+        label "master"
 
     }
-    agent any
+
     tools {
-        maven 'MAVEN'
+
+        maven "Maven"
+
     }
 
+    environment {
+
+        NEXUS_VERSION = "nexus3"
+
+        NEXUS_PROTOCOL = "http"
+
+        NEXUS_URL = "http://18.222.198.245:8081/"
+
+        NEXUS_REPOSITORY = "maven-nexus-repo"
+
+        NEXUS_CREDENTIAL_ID = "NEXUS_CRED"
+
+    }
     stages {
         stage('Build Maven') {
             steps{
@@ -20,22 +34,5 @@ pipeline {
                 
             }
         }
-     stage('Build Docker Image') {
-            steps {
-                script {
-                  sh 'docker build -t devopshint/my-app-1.0:latest .'
-                }
-            }
-        }
-    stage('Deploy Image') {
-        steps {
-            script {
-                docker.withRegistry( '', registryCredential ) {
-                 sh 'docker push devopshint/my-app-1.0:latest'
-
-}
-}
-}
-}
-}
+    }
 }
