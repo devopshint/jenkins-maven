@@ -60,7 +60,7 @@ pipeline {
 
                             protocol: http,
 
-                            nexusUrl: http://18.222.198.245:8081,
+                            nexusUrl: "http://18.222.198.245:8081/"
 
                             groupId: com.mycompany.app,
 
