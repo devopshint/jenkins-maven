@@ -56,19 +56,19 @@ pipeline {
 
                         nexusArtifactUploader(
 
-                            nexusVersion: NEXUS_VERSION,
+                            nexusVersion: nexus3,
 
-                            protocol: NEXUS_PROTOCOL,
+                            protocol: http,
 
-                            nexusUrl: NEXUS_URL,
+                            nexusUrl: http://18.222.198.245:8081,
 
-                            groupId: pom.groupId,
+                            groupId: com.mycompany.app,
 
-                            version: pom.version,
+                            version: 1.0-SNAPSHOT,
 
-                            repository: NEXUS_REPOSITORY,
+                            repository: maven-nexus-repo,
 
-                            credentialsId: NEXUS_CREDENTIAL_ID,
+                            credentialsId: NEXUS_CRED,
 
                             artifacts: [
 
