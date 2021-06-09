@@ -55,19 +55,19 @@ pipeline {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
 
                         nexusArtifactUploader(
-                            nexusVersion: "nexus3",
+                            nexusVersion: nexus3,
                             
-                            protocol: "http",
+                            protocol: http,
 
-                            nexusUrl: "http://18.222.198.245:8081/",
+                            nexusUrl: http://18.222.198.245:8081/,
 
-                            groupId: "com.mycompany.app",
+                            groupId: com.mycompany.app,
 
-                            version: "1.0-SNAPSHOT",
+                            version: 1.0-SNAPSHOT,
 
-                            repository: "maven-nexus-repo",
+                            repository: maven-nexus-repo,
 
-                            credentialsId: "NEXUS_CRED",
+                            credentialsId: NEXUS_CRED,
 
                             artifacts: [
 
