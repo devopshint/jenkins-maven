@@ -18,7 +18,7 @@ pipeline {
 
         NEXUS_PROTOCOL = "http"
 
-        NEXUS_URL = "http://3.131.96.131:8081/"
+        NEXUS_URL = "http://3.131.96.131:8081"
 
         NEXUS_REPOSITORY = "maven-nexus-repo"
 
@@ -59,7 +59,7 @@ pipeline {
                             
                             protocol: 'http',
 
-                            nexusUrl: 'http://3.131.96.131:8081/',
+                            nexusUrl: 'http://3.131.96.131:8081',
 
                             groupId: 'com.mycompany.app',
 
