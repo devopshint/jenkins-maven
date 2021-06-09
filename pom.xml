@@ -27,6 +27,20 @@
     </dependency>
   </dependencies>
 
+<pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>http://3.131.96.131:8081/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>daily</updatePolicy>
+        </snapshots>
+        <releases>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+        </releases>
+    </pluginRepository>
+</pluginRepositories>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
