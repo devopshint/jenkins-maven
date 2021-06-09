@@ -23,6 +23,9 @@ pipeline {
         NEXUS_REPOSITORY = "maven-nexus-repo"
 
         NEXUS_CREDENTIAL_ID = "NEXUS_CRED"
+        registry = "devopshint/my-app-1.0" 
+
+        registryCredential = 'devopshint' 
 
     }
     stages {
