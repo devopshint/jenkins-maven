@@ -61,9 +61,9 @@ pipeline {
 
                             nexusUrl: 'http://3.131.96.131:8081',
 
-                            groupId: 'com.mycompany.app',
+                            groupId: 'pom.com.mycompany.app',
 
-                            version: '1.0-SNAPSHOT',
+                            version: 'pom.1.0-SNAPSHOT',
 
                             repository: 'maven-nexus-repo',
 
@@ -71,7 +71,7 @@ pipeline {
 
                             artifacts: [
 
-                                [artifactId: 'my-app',
+                                [artifactId: 'pom.my-app',
 
                                 classifier: '',
 
@@ -79,7 +79,7 @@ pipeline {
 
                                 type: pom.packaging],
 
-                                [artifactId: 'my-app',
+                                [artifactId: 'pom.my-app',
 
                                 classifier: '',
 
