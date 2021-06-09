@@ -18,7 +18,7 @@ pipeline {
 
         NEXUS_PROTOCOL = "http"
 
-        NEXUS_URL = "http://18.222.198.245:8081/"
+        NEXUS_URL = "http://3.131.96.131:8081/"
 
         NEXUS_REPOSITORY = "maven-nexus-repo"
 
@@ -57,21 +57,21 @@ pipeline {
                         nexusArtifactUploader(
                             nexusVersion: nexus3,
                             
-                            protocol: http,
+                            protocol: 'http',
 
-                            nexusUrl: http://18.222.198.245:8081/,
+                            nexusUrl: 'http://3.131.96.131:8081/',
 
-                            groupId: com.mycompany.app,
+                            groupId: 'com.mycompany.app',
 
-                            version: 1.0-SNAPSHOT,
+                            version: '1.0-SNAPSHOT',
 
-                            repository: maven-nexus-repo,
+                            repository: 'maven-nexus-repo',
 
-                            credentialsId: NEXUS_CRED,
+                            credentialsId: 'NEXUS_CRED',
 
                             artifacts: [
 
-                                [artifactId: pom.artifactId,
+                                [artifactId: 'my-app',
 
                                 classifier: '',
 
@@ -79,7 +79,7 @@ pipeline {
 
                                 type: pom.packaging],
 
-                                [artifactId: pom.artifactId,
+                                [artifactId: 'my-app',
 
                                 classifier: '',
 
