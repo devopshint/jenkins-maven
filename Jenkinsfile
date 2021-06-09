@@ -116,7 +116,8 @@ pipeline {
                 docker.withRegistry( '', registryCredential ) {
                  sh 'docker push devopshint/my-app-1.0:latest'
 
-   
+                }
     }
-
-}
+            }
+    }
+    }
